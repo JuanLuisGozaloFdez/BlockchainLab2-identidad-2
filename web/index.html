@@ -13,9 +13,9 @@
         //Variables
         //Contratos
         //ACCIÓN: ===> Deben ponerse las direcciones de los contratos desplegados según corresponda
-        var contrato_alumno = "0x67A3c84bF59333aE8c44C64Cd163b63855f5467d";
-        var contrato_uni = "0x47b6BC51F5c7edD6A3e5F8F8a28335F9C8A290C2";
-        var contrato_empresa = "0x724A5f011D7D5912E9D628cD90ECa472F6731f6A";
+        var contrato_alumno = "0x123D3e68a20A72CfCB95a9556b4F063443abF6aa";
+        var contrato_uni = "0xdd56440F7a5F363664BB2CE30d1f563191624388";
+        var contrato_empresa = "0x12B25835Dde7E349b8291Fd1426217D1a2dbAb04";
 
         //Se instancia el objeto web3
         //ACCIÓN: ===> Debe configurarse el puerto de manera adecuada al correspondiente del Web Provider
@@ -46,15 +46,8 @@
 	    //Al no cambiar el estado se hace con call. Si usasemos send no nos devolvería el número de la transacción.
         function getKeyByPurposeAlumno(purpose)
         {
-		        /*instanciaAlumno.methods.getKeysByPurpose(parseInt(purpose)).send( {from: cuentaAlumno, gas: 30000}, function(error, result){
-                  if(!error){
-                      console.log(result);
-                      document.getElementById('console').innerHTML = document.getElementById('console').innerHTML+"<br>"+result;
-                  }
-                  else
-                      console.error(error);
-                });*/
-	            instanciaAlumno.methods.getKeysByPurpose(parseInt(purpose)).call(function(error, result){
+		        /*
+                instanciaAlumno.methods.getKeysByPurpose(parseInt(purpose)).send( {from: cuentaAlumno, gas: 30000}, function(error, result){
                   if(!error){
                       console.log(result);
                       document.getElementById('console').innerHTML = document.getElementById('console').innerHTML+"<br>"+result;
@@ -62,6 +55,18 @@
                   else
                       console.error(error);
                 });
+                */
+	            
+                instanciaAlumno.methods.getKeysByPurpose(parseInt(purpose)).call(function(error, result){
+                  if(!error){
+                      console.log(result);
+                      document.getElementById('console').innerHTML = document.getElementById('console').innerHTML+"<br>"+result;
+                  }
+                  else
+                      console.error(error);
+                });
+                
+                
         }
 
         //ACCIÓN: ===> CODIFICAR LA FUNCIÓN SIGUIENTE
