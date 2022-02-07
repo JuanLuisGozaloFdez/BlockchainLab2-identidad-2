@@ -1,0 +1,20 @@
+{
+  "name": "blockchainlab2-identidad-2",
+  "version": "1.0.0",
+  "description": "## Práctica de Identidad Digital",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanLuisGozaloFdez/BlockchainLab2-identidad-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanLuisGozaloFdez/BlockchainLab2-identidad-2/issues"
+  },
+  "homepage": "https://github.com/JuanLuisGozaloFdez/BlockchainLab2-identidad-2#readme"
+}
