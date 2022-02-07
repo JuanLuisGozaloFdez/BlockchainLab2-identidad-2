@@ -1,4 +1,4 @@
-pragma solidity ^0.4.22;
+pragma solidity >=0.4.22;
 
 // **Warning!** This file is a protoype version of our work around ERC 725.
 // This file is now out of date and **should not be used**.
