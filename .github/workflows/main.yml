@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    # runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      # Setup a Node
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+      # Set initial npm environment, if required
+      # - name: Setup npm environment
+      #   run: npm init -y
+      # Install truffle    
+      - name: Install truffle
+        run: npm install -g truffle
+      # Let's run the truffle compile  
+      - name: Compile with Truffle
+        run: truffle compile
